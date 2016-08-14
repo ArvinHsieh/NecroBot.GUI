@@ -22,10 +22,6 @@ namespace PoGo.NecroBot.GUI
         public void Write(string message, LogLevel level = LogLevel.Info, ConsoleColor consoleColor = ConsoleColor.Black)
         {
             Color color = Color.White;
-            if (level == LogLevel.Debug)
-            {
-                return;
-            }
 
             switch (level)
             {
@@ -39,6 +35,7 @@ namespace PoGo.NecroBot.GUI
                     color = Color.Orange;
                     break;
                 case LogLevel.Pokestop:
+                    color = Color.LightGoldenrodYellow;
                     break;
                 case LogLevel.Farming:
                     break;
@@ -58,8 +55,10 @@ namespace PoGo.NecroBot.GUI
                     color = Color.DarkRed;
                     break;
                 case LogLevel.Transfer:
+                    color = Color.LightPink;
                     break;
                 case LogLevel.Evolve:
+                    color = Color.LightSteelBlue;
                     break;
                 case LogLevel.Egg:
                 case LogLevel.Update:
